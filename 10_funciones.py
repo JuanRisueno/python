@@ -43,6 +43,7 @@ imprime_textos("Hola","Python","JohnyRisu")
 imprime_textos("Hola")
 
 def imprime_mayus (*textos):
+    print(type(textos)) # Se ve que el tipado de textos es una tupla
     for texto in textos:
         print(texto.upper())
 

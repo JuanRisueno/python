@@ -27,8 +27,10 @@ nombre, apellido, alias, edad = "Juan", "Risueño", "RisuTech", 44
 print("Mi edad es:", edad, "y mi apellido es:",apellido, "mi nombre es:", nombre,"y mi alias es", alias)
 
 #input --> pide un valor y lo almacena en una variable
-#nombre = input ("¿Cual es tu nombre?")
-#print("Mi nombre es ", nombre)
+nombre = input ("¿Cual es tu nombre? ")
+edad = input ("¿Cual es tu edad? ")
+print("Mi nombre es ", nombre)
+print("Mi edad es ",edad," años")
 
 #Cambiamos el tipo de dato a la variable
 nombre = 44
