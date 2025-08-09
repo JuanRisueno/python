@@ -1,5 +1,7 @@
 ### Tuplas ###
 
+## En Python, una tupla es una colección ordenada e inmutable de elementos. Esto significa que una vez creada, no se puede modificar su contenido. 
+
 my_tuple= tuple ()
 my_other_tuple = ()
 

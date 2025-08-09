@@ -1,5 +1,7 @@
 ### Sets ###
 
+## En Python, un set es una estructura de datos que almacena una colección de elementos únicos y no ordenados. Los sets son mutables, lo que significa que se pueden modificar después de su creación, pero sus elementos deben ser inmutables.
+
 my_set = set()
 my_other_set = {}
 

@@ -1,5 +1,7 @@
 ### DICCIONARIOS ###
 
+## En Python, un diccionario es una estructura de datos que almacena elementos como pares de clave-valor, permitiendo acceder a los valores utilizando sus claves únicas. Es una colección no ordenada, mutable y dinámica de elementos,
+
 my_dict = dict()
 my_other_dict = {}
 

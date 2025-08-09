@@ -1,5 +1,7 @@
 ### LISTAS (Engloba a los arrays y a las listas en sí. En Python no existen los arrays como en otros lenguajes. Existen las listas.) ###
 
+## En Python, una lista es una estructura de datos ordenada y mutable que puede almacenar una colección de elementos de diferentes tipos. Es una de las estructuras de datos más versátiles del lenguaje y se utiliza para agrupar y manipular varios elementos bajo un mismo nombre.
+
 my_list = list () # Creando listas 
 my_other_list = [] # Otra forma de crear listas. Es la forma más común para definir las listas
 
