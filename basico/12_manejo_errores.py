@@ -1,39 +1,39 @@
 ### Manejo de Errores ###
 
-numUno, numDos = 5, 1 #Definir variables en una línea
+num1, num2 = 5, 1 #Definir variables en una línea
 
 ## try except
 
 try:
-    print(numUno + numDos) #No se puede sumar int y str. Con lo que, esto da un error.
+    print(num1 + num2) #No se puede sumar int y str. Con lo que, esto da un error.
     print("No se ha producido un error")
 except:
     print("Se ha producido un error")
 
-numDos = "1"
+num2 = "1"
 
 try: 
-    print(numUno + numDos)
+    print(num1 + num2)
     print("No se ha producido un error")
 except:
     print("Se ha producido un error")
 
 ## try except else
 
-numDos = "1"
+num2 = "1"
 
 try: 
-    print(numUno + numDos)
+    print(num1 + num2)
     print("No se ha producido un error")
 except:
     print("Se ha producido un error")
 else: #Si hay un error, no se ejecuta el else
     print("La ejecución continúa")
 
-numDos = 1
+num2 = 1
 
 try: 
-    print(numUno + numDos)
+    print(num1 + num2)
     print("No se ha producido un error")
 except:
     print("Se ha producido un error")
@@ -42,10 +42,10 @@ else: # else se ejecuta si no se producen errores
 
 ## try except else finally
 
-numDos = "1"
+num2 = "1"
 
 try: 
-    print(numUno + numDos)
+    print(num1 + num2)
     print("No se ha producido un error")
 except:
     print("Se ha producido un error")
@@ -54,10 +54,10 @@ else: #Si hay un error, no se ejecuta el else
 finally: #Se ejecuta hayan o no errores
     print("Se ejecuta seguro")
 
-numDos = 1
+num2 = 1
 
 try: 
-    print(numUno + numDos)
+    print(num1 + num2)
     print("No se ha producido un error")
 except:
     print("Se ha producido un error")
@@ -70,22 +70,22 @@ finally:
 
 ## Errores por tipo
 
-numDos = "1"
+num2 = "1"
 
 try: 
-    print(numUno + numDos)
+    print(num1 + num2)
     print("No se ha producido un error")
 except TypeError: #el except se ejecutará SOLO si hay un error TypeError
     print("Se ha producido un error")
 
 # try: 
-#    print(numUno + numDos)
+#    print(num1 + num2)
 #    print("No se ha producido un error")
 # except not TypeError: #el except se ejecutará SOLO si hay un error distinto a TypeError ... atento al not
 #    print("Se ha producido un error")
 
 try: 
-    print(numUno + numDos)
+    print(num1 + num2)
     print("No se ha producido un error")
 except ValueError:
     print("Se ha producido un ValueError")
@@ -94,10 +94,10 @@ except TypeError: #Se puede usar varios except específicos
 
 ## Capturar el tipo de error
 
-numDos = "1"
+num2 = "1"
 
 try: 
-    print(numUno + numDos)
+    print(num1 + num2)
     print("No se ha producido un error")
 except TypeError as typeError: #el error se guarda en la variable varError
     print("Se ha producido un TypeError")
@@ -106,7 +106,7 @@ except TypeError as typeError: #el error se guarda en la variable varError
 print ("Fin del programa") #comprobamos que el programa continúa y se termina
 
 try: 
-    print(numUno + numDos)
+    print(num1 + num2)
     print("No se ha producido un error")
 except ValueError as valueError: 
     print("Se ha producido un error ValueError")
