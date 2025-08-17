@@ -2,6 +2,8 @@
 my_string = "Mi String"
 my_other_string = 'Mi otro String'
 
+#En Python, len() es una función incorporada que devuelve la longitud (número de elementos) de un objeto. Funciona con secuencias como cadenas, listas, tuplas y diccionarios, devolviendo un entero que representa la cantidad de elementos en el objeto
+
 print(len(my_string))
 print(len(my_other_string))
 
