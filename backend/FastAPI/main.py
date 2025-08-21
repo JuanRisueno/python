@@ -1,6 +1,15 @@
 from fastapi import FastAPI
+from routers import products, users #MUY IMPORTANTE importar todos los routers
+from fastapi.staticfiles import StaticFiles #Importar para recursos estáticos
 
 app = FastAPI() #Instanciamos FastAPI
+
+# Routers
+app.include_router(products.router) #Así llamamos al router y lo incluimos en nuestra api principal
+app.include_router(users.router)
+
+# Recursos Estáticos
+app.mount("/static",StaticFiles(directory="static"),name="static")
 
 @app.get("/") #Se hace una petición al servidor. get forma parte de las operaciones http
 async def root():   #Una operación asíncrona es aquella que no bloquea la ejecución del programa principal mientras espera que se complete una tarea de larga duración
@@ -14,6 +23,8 @@ async def root():   #Una operación asíncrona es aquella que no bloquea la ejec
 async def url():
     return {"url_curso":"https://mouredev.com/python"}
 
+# Url Local: http://127.0.0.1:8000
+# Url Local: http://127.0.0.1:8000/url
 # Documentación en Swagger: http://127.0.0.1:8000/docs
 # Documentación en ReDocly: http://127.0.0.1:8000/redoc
 
