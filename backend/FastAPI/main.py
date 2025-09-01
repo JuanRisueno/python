@@ -1,4 +1,5 @@
 #MUY IMPORTANTE ... CAMBIAR DE ENTORNO VIRTUAL CON: source .venv/bin/activate ... para descativarlo, sencillamente el comando deactivate
+
 from fastapi import FastAPI
 from routers import products, users, basic_auth_users, jwl_auth_users #MUY IMPORTANTE importar todos los routers
 from fastapi.staticfiles import StaticFiles #Importar para recursos estáticos
@@ -10,7 +11,6 @@ app.include_router(products.router) #Así llamamos al router y lo incluimos en n
 app.include_router(users.router)
 app.include_router(basic_auth_users.router)
 app.include_router(jwl_auth_users.router)
-
 
 # Recursos Estáticos
 app.mount("/static",StaticFiles(directory="static"),name="static")
