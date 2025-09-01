@@ -1,9 +1,9 @@
-from fastapi import FastAPI, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, status
 from pydantic import BaseModel #Hay que importarlo para definir usuarios
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm    #OAuth2PasswordBearer se encarga de autenticar usuarios/contraseña
                                                                                 #OAuth2PasswordRequestForm es lo que usa el backend para recibir el usuario/contraseña desde el cliente y comprobarlo con la BBDD
 
-app = FastAPI()
+router = APIRouter()
 
 oauth2 = OAuth2PasswordBearer(tokenUrl = "login") #Creamos la instancia para OAuth2PasswordBearer. Además tiene que tener un token como parámetro. Este token será el que valide o no la autenticación en el sistema.
 
@@ -56,7 +56,7 @@ async def current_user(token:str = Depends(oauth2)):
     
     return user
     
-@app.post("/login")
+@router.post("/login")
 async def login(form:OAuth2PasswordRequestForm = Depends()): #Aquí utilizamos el OAuth2PasswordRequestForm como parámetro para nuestro login. Depends quiere decir que se van a recibir datos, pero no dependen de nadie
     user_db = users_db.get(form.username)
     if not user_db:
@@ -72,6 +72,6 @@ async def login(form:OAuth2PasswordRequestForm = Depends()): #Aquí utilizamos e
     
     return {"access_token":user.username, "token_type":"bearer"}
 
-@app.get("/users/me")
+@router.get("/users/me")
 async def me(user: User = Depends(current_user)): #MUY IMPORTANTE. De los usuarios que tenemos definidos, devolvemos en el get el usuario que NO TIENE la contraseña. POR MOTIVOS DE SEGURIDAD
     return user
