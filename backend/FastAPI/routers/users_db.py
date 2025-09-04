@@ -41,7 +41,6 @@ async def user(user: User):
 async def users():
     return users_schema(db_client.users.find())
 
-
 ### Path
 @router.get("/{id}")
 async def user(id: str):
@@ -51,7 +50,6 @@ async def user(id: str):
 @router.get("/")
 async def user(id: str):
     return search_user("_id", ObjectId(id))
-
 
 ### Actualizar o modificar Usuarios
 @router.put("/", response_model=User)

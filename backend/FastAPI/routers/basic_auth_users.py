@@ -3,7 +3,11 @@ from pydantic import BaseModel #Hay que importarlo para definir usuarios
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm    #OAuth2PasswordBearer se encarga de autenticar usuarios/contraseña
                                                                                 #OAuth2PasswordRequestForm es lo que usa el backend para recibir el usuario/contraseña desde el cliente y comprobarlo con la BBDD
 
-router = APIRouter()
+router = APIRouter(
+    prefix="/basicauth",
+    tags=["basicauth"],
+    responses={status.HTTP_404_NOT_FOUND: {"message":"No Encontrado"}}
+)
 
 oauth2 = OAuth2PasswordBearer(tokenUrl = "login") #Creamos la instancia para OAuth2PasswordBearer. Además tiene que tener un token como parámetro. Este token será el que valide o no la autenticación en el sistema.
 
