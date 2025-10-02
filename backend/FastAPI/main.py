@@ -1,3 +1,4 @@
+# python -m venv .venv <<< así se crea el entorno virtual
 #MUY IMPORTANTE ... CAMBIAR DE ENTORNO VIRTUAL CON: source .venv/bin/activate ... para descativarlo, sencillamente el comando deactivate
 
 #Crear requeriments.txt: desde el entorno virtual: pip freeze > requeriments.txt
