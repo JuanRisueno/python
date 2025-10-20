@@ -54,6 +54,7 @@ lenguaje_rev = lenguaje[::-1]
 print(lenguaje_rev)
 
 ### FUNCIONES ###
+lenguaje = "estoy aprendiendo python"
 print(lenguaje.capitalize())
 print(lenguaje.upper())
 print(lenguaje.lower())
@@ -63,3 +64,5 @@ print("1".isnumeric())
 print(lenguaje.upper().isupper())
 print(lenguaje.lower().isupper())
 print(lenguaje.startswith("py"))
+print(lenguaje.title())
+print(lenguaje.replace('y','i'))
