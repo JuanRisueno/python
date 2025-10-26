@@ -8,14 +8,12 @@ Desarrolla un programa que:
 num1 = int(input("Dime el número 1: "))
 num2 = int(input("Dime el número 2: "))
 
-compara = (num1 > num2)
-print(f"El numero 1 es mayor que el numero 2: {compara}")
-
-compara = (num1 > num2)
-print(f"El numero 1 es mayor que el numero 2: {compara}")
-
-compara = (num1 == num2)
-print(f"El numero 1 es mayor que el numero 2: {compara}")
+if num1 > num2:
+    print (f"El número {num1} es mayor que el número {num2} ")
+elif num2 > num1:
+    print (f"El número {num2} es mayor que el número {num1}")
+else:
+    print ("Los dós números ons iguales")
 
 mod1 = (num1 % 2 == 0)
 mod2 = (num2 % 2 == 0)
